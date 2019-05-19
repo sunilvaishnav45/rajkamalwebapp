@@ -70,7 +70,12 @@ public class Product {
 	@NotNull(message="NOT_NULL")
 	private int rating;
 	
-
+	@Type(type= "org.hibernate.type.NumericBooleanType")
+	@NotNull(message="NOT_NULL")
+	@Column(name="availability")
+	private boolean availability;
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -162,6 +167,13 @@ public class Product {
 	public void setRating(int rating) {
 		this.rating = rating;
 	}
-	
+
+	public boolean isAvailability() {
+		return availability;
+	}
+
+	public void setAvailability(boolean availability) {
+		this.availability = availability;
+	}
 	
 }
