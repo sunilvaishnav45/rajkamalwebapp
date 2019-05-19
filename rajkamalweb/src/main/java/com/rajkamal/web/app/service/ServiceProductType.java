@@ -2,6 +2,7 @@ package com.rajkamal.web.app.service;
 
 import java.util.List;
 
+import com.rajkamal.web.app.dto.view.DtoSearchSuggestionViewDto;
 import com.rajkamal.web.app.mapping.ProductType;
 
 public interface ServiceProductType {
@@ -25,5 +26,12 @@ public interface ServiceProductType {
 	 * @return
 	 */
 	public List<ProductType> getProductTypeNameLike(String productTypeNameLike);
+	
+	/**
+	 * This method will return all possible result found for Companies by name
+	 * @param query
+	 * @return
+	 */
+	public List<DtoSearchSuggestionViewDto> getSuggestionFor(String query);
 
 }

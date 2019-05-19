@@ -12,5 +12,7 @@ public class Home {
 	public String getHomePageData() {
 		return "Home page served";
 	}
+	
+	
 
 }
