@@ -7,5 +7,6 @@ import com.rajkamal.web.app.mapping.Color;
 
 @Repository
 public interface DaoColor extends JpaRepository<Color, Integer>{
-
+	
+	public Color findByName(String name);
 }
