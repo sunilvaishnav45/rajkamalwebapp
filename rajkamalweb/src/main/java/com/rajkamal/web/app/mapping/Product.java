@@ -60,6 +60,11 @@ public class Product {
 	
 	@Column(name = "img_url")
 	private String imgUrl;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "color")
+	@NotNull(message="NOT_NULL")
+	private Color color;
 
 	public String getName() {
 		return name;
@@ -135,6 +140,14 @@ public class Product {
 
 	public int getId() {
 		return id;
+	}
+
+	public Color getColor() {
+		return color;
+	}
+
+	public void setColor(Color color) {
+		this.color = color;
 	}
 	
 }
