@@ -65,6 +65,11 @@ public class Product {
 	@JoinColumn(name = "color")
 	@NotNull(message="NOT_NULL")
 	private Color color;
+	
+	@Column(name = "rating")
+	@NotNull(message="NOT_NULL")
+	private int rating;
+	
 
 	public String getName() {
 		return name;
@@ -149,5 +154,14 @@ public class Product {
 	public void setColor(Color color) {
 		this.color = color;
 	}
+
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+	
 	
 }
