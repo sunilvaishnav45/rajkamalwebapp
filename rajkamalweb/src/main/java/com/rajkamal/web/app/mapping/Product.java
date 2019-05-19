@@ -70,6 +70,10 @@ public class Product {
 	@Column(name="availability")
 	private boolean availability;
 	
+	@Type(type= "org.hibernate.type.NumericBooleanType")
+	@NotNull(message="NOT_NULL")
+	@Column(name="visiblility")
+	private boolean visiblility;
 	
 	public String getName() {
 		return name;
@@ -161,6 +165,14 @@ public class Product {
 
 	public void setAvailability(boolean availability) {
 		this.availability = availability;
+	}
+
+	public boolean isVisiblility() {
+		return visiblility;
+	}
+
+	public void setVisiblility(boolean visiblility) {
+		this.visiblility = visiblility;
 	}
 	
 }

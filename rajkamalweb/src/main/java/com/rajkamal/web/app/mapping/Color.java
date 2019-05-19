@@ -20,6 +20,12 @@ public class Color {
 	@Column(name = "name")
 	@NotNull(message="NOT_NULL")
 	private String name;
+	
+	
+	@Column(name = "hash_code")
+	@NotNull(message="NOT_NULL")
+	private String hashCode;
+	
 
 	public String getName() {
 		return name;
@@ -31,6 +37,14 @@ public class Color {
 
 	public int getId() {
 		return id;
+	}
+
+	public String getHashCode() {
+		return hashCode;
+	}
+
+	public void setHashCode(String hashCode) {
+		this.hashCode = hashCode;
 	}
 	
 }
