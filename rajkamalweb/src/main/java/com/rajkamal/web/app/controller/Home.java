@@ -10,7 +10,7 @@ public class Home {
 	
 	@GetMapping(value = {"","/"})
 	public String getHomePageData() {
-		return "Home page serveed";
+		return "Home page served";
 	}
 
 }
